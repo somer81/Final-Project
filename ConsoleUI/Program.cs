@@ -45,28 +45,35 @@ namespace ConsoleUI
             }
         }
 
-        //private static void ProductTest()
-        //{
-        //    ProductManager productManager = new ProductManager(new EfProductDal());
+        private static void ProductTest()
+        {
+            ProductManager productManager = new ProductManager(new EfProductDal());
+
+            var result = productManager.GetAllByCategoryId(1);
+
+            if(result.Success == true)
+            {
+            foreach (var p in result.Data)
+            {
+                Console.WriteLine(p.ProductName + " " + p.CategoryId);
+            }
+            }
+          else
+            {
+                Console.WriteLine(result.Message);
+            }
 
 
-
-        //    foreach (var p in productManager.GetAllByCategoryId(1))
-        //    {
-        //        Console.WriteLine(p.ProductName + " " + p.CategoryId);
-        //    }
-
-
-        //    foreach (var p in productManager.GetAllByUnitPrice(100, 1000))
-        //    {
-        //        Console.WriteLine(p.ProductName + " " + p.UnitPrice);
-        //    }
+            //foreach (var p in productManager.GetAllByUnitPrice(100, 1000))
+            //{
+            //    Console.WriteLine(p.ProductName + " " + p.UnitPrice);
+            //}
 
 
-        //    foreach (var p in productManager.GetAll())
-        //    {
-        //        Console.WriteLine(p.ProductName);
-        //    }
-        //}
+            //foreach (var p in productManager.GetAll())
+            //{
+            //    Console.WriteLine(p.ProductName);
+            //}
+        }
     }
 }
