@@ -62,3 +62,5 @@ C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pd
 C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\AHC\source\repos\FinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll

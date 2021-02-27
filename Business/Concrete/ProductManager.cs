@@ -32,13 +32,18 @@ namespace Business.Concrete
           
         }
 
+
+        //[SecuredOperation("product.add")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
 
 
-            IResult result = BusinessRules.Run(CheckIfProductNameIsExists(product.ProductName),
-                CheckIfProductCountOfCategoryCorrect(product.CategoryId), CheckIfCategoryNumberExceeds());
+            IResult result = BusinessRules.Run(
+                CheckIfProductNameIsExists(product.ProductName),
+                CheckIfProductCountOfCategoryCorrect(product.CategoryId), 
+                CheckIfCategoryNumberExceeds()
+                );
 
             if (result != null)
             {
